@@ -13,7 +13,7 @@ import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
 
 import {useForm, Controller} from "react-hook-form";
-
+import Image from 'next/image';
 
 const style = {
     position: "absolute",
@@ -504,7 +504,7 @@ function Hero() {
                                 className={'crazy-whale-text'}
                             >
                                 Crazy Whales is a collection of 3,000 randomly generated NFTs on
-                                the BSC blockchain & created by world's first decentralized VC
+                                the BSC blockchain & created by world&apos;s first decentralized VC
                                 GAINS Associates. Our whales are wet, cute, fun, and sometimes
                                 grumpy. Crazy Whales are known to have different rarities, surf on
                                 beautiful waves, eat salty plankton & donate a portion of their
@@ -553,7 +553,7 @@ function Hero() {
                         component="div"
                     >
                         <Flip left>
-                            <img id="WhaleWallpaper" src="/whale.png" alt="WhaleWallpaper"/>
+                            <Image width={417} height={403} id="WhaleWallpaper" src={"/HeroWhale.png"} alt="WhaleWallpaper"/>
                         </Flip>
                         <Typography
                             sx={{
