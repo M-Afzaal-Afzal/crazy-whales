@@ -50,7 +50,7 @@ const CssTextField = styled(TextField)({
 
 function Hero() {
 
-    const {control, handleSubmit, setValue, getValues} = useForm({
+    const {control, handleSubmit, setValue, getValues, formState: {errors}} = useForm({
         defaultValues: {
             gains: '',
             nft: ''
@@ -66,8 +66,8 @@ function Hero() {
     const switchValues = () => {
         const userInputedValues = getValues();
         // console.log(userInputedValues)
-        setValue('gains',userInputedValues.nft);
-        setValue('nft',userInputedValues.gains);
+        setValue('gains', userInputedValues.nft);
+        setValue('nft', userInputedValues.gains);
     }
 
     return (
@@ -200,6 +200,7 @@ function Hero() {
                                         />}
                                     />
 
+
                                     <Button
                                         sx={{
                                             fontSize: {
@@ -221,6 +222,22 @@ function Hero() {
                                         GAINS
                                     </Button>
                                 </Box>
+
+                                {
+                                    errors.gains && (
+
+                                        <Box sx={{
+                                            width: '100%',
+                                            color: 'red',
+                                            mt: '4px',
+                                            ml: '2rem',
+                                        }}>
+                                            {errors.gains.message}
+                                        </Box>
+                                    )
+                                }
+
+
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -314,6 +331,19 @@ function Hero() {
                                         NFT
                                     </Button>
                                 </Box>
+                                {
+                                    errors.nft && (
+
+                                        <Box sx={{
+                                            width: '100%',
+                                            color: 'red',
+                                            mt: '4px',
+                                            ml: '2rem',
+                                        }}>
+                                            {errors.nft.message}
+                                        </Box>
+                                    )
+                                }
                                 <Button
                                     sx={{
                                         mt: 4,
@@ -422,89 +452,89 @@ function Hero() {
                         component="div"
                     >
                         <Fade bottom cascade>
-                        <Typography
-                            id="hero-heading"
-                            variant="h1"
-                            component="div"
-                            gutterBottom
-                            sx={{
-                                fontFamily: "'Cinzel Decorative', cursive",
-                                fontSize: {
-                                    md: "120px",
-                                    xs: "90px",
-                                },
-                                fontWeight: 700,
-                                lineHeight: {
-                                    xs: "107.84px",
-                                    lg: "170px"
-                                },
-                                mt: '3rem',
-                                textTransform: "uppercase",
-                                textAlign: "center",
-                                width: {
-                                    lg: "588px",
-                                    sm: "auto",
-                                },
-                                mb: 1,
-                            }}
-                            className={'crazy-whale'}
-                        >
-                            Crazy{" "}
-                            <Box
-                                component="span"
+                            <Typography
+                                id="hero-heading"
+                                variant="h1"
+                                component="div"
+                                gutterBottom
                                 sx={{
                                     fontFamily: "'Cinzel Decorative', cursive",
-                                    fontWeight: 400,
+                                    fontSize: {
+                                        md: "120px",
+                                        xs: "90px",
+                                    },
+                                    fontWeight: 700,
+                                    lineHeight: {
+                                        xs: "107.84px",
+                                        lg: "170px"
+                                    },
+                                    mt: '3rem',
+                                    textTransform: "uppercase",
+                                    textAlign: "center",
+                                    width: {
+                                        lg: "588px",
+                                        sm: "auto",
+                                    },
+                                    mb: 1,
                                 }}
+                                className={'crazy-whale'}
                             >
-                                Whales
-                            </Box>
-                        </Typography>
-                        <Typography
-                            sx={{
-                                fontFamily: "lato",
-                                fontWeight: "500",
-                                fontSize: "17px",
-                                lineHeight: "30px",
-                                color: "rgba(255, 255, 255, 0.9)",
-                                textAlign: "center",
-                            }}
-                            variant="body1"
-                            gutterBottom
-                            className={'crazy-whale-text'}
-                        >
-                            Crazy Whales is a collection of 3,000 randomly generated NFTs on
-                            the BSC blockchain & created by world's first decentralized VC
-                            GAINS Associates. Our whales are wet, cute, fun, and sometimes
-                            grumpy. Crazy Whales are known to have different rarities, surf on
-                            beautiful waves, eat salty plankton & donate a portion of their
-                            royalties to non-profit organizations that protect oceans. Support
-                            the whale cause now by minting your first Crazy Whale!
-                        </Typography>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                width: {
-                                    sm: "372px",
-                                    xm: "90%",
-                                },
-                                height: "90px",
-                                background: "#88E9FC",
-                                borderRadius: "10px",
-                                color: "black",
-                                fontSize: "24px",
-                                lineHeight: "30px",
-                                fontWeight: 400,
-                                mt: 5,
-                                "&:hover": {
+                                Crazy{" "}
+                                <Box
+                                    component="span"
+                                    sx={{
+                                        fontFamily: "'Cinzel Decorative', cursive",
+                                        fontWeight: 400,
+                                    }}
+                                >
+                                    Whales
+                                </Box>
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontFamily: "lato",
+                                    fontWeight: "500",
+                                    fontSize: "17px",
+                                    lineHeight: "30px",
+                                    color: "rgba(255, 255, 255, 0.9)",
+                                    textAlign: "center",
+                                }}
+                                variant="body1"
+                                gutterBottom
+                                className={'crazy-whale-text'}
+                            >
+                                Crazy Whales is a collection of 3,000 randomly generated NFTs on
+                                the BSC blockchain & created by world's first decentralized VC
+                                GAINS Associates. Our whales are wet, cute, fun, and sometimes
+                                grumpy. Crazy Whales are known to have different rarities, surf on
+                                beautiful waves, eat salty plankton & donate a portion of their
+                                royalties to non-profit organizations that protect oceans. Support
+                                the whale cause now by minting your first Crazy Whale!
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    width: {
+                                        sm: "372px",
+                                        xm: "90%",
+                                    },
+                                    height: "90px",
                                     background: "#88E9FC",
-                                },
-                            }}
-                            onClick={handleOpen}
-                            className={'claim-my-whale'}
-                        >
-                            Claim my Crazy Whale
-                        </Button>
+                                    borderRadius: "10px",
+                                    color: "black",
+                                    fontSize: "24px",
+                                    lineHeight: "30px",
+                                    fontWeight: 400,
+                                    mt: 5,
+                                    "&:hover": {
+                                        background: "#88E9FC",
+                                    },
+                                }}
+                                onClick={handleOpen}
+                                className={'claim-my-whale'}
+                            >
+                                Claim my Crazy Whale
+                            </Button>
                         </Fade>
                     </Box>
                     <Box
@@ -523,7 +553,7 @@ function Hero() {
                         component="div"
                     >
                         <Flip left>
-                        <img id="WhaleWallpaper" src="/whale1.png" alt="WhaleWallpaper"/>
+                            <img id="WhaleWallpaper" src="/whale1.png" alt="WhaleWallpaper"/>
                         </Flip>
                         <Typography
                             sx={{
