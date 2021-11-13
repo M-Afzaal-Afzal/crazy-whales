@@ -553,7 +553,7 @@ function Hero() {
                         component="div"
                     >
                         <Flip left>
-                            <img id="WhaleWallpaper" src="/whale1.png" alt="WhaleWallpaper"/>
+                            <img id="WhaleWallpaper" src="/whale.png" alt="WhaleWallpaper"/>
                         </Flip>
                         <Typography
                             sx={{
