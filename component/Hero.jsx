@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import {Button} from "@mui/material";
@@ -50,14 +50,14 @@ const CssTextField = styled(TextField)({
 
 function Hero() {
 
-    const {control, handleSubmit, setValue, getValues, formState: {errors}} = useForm({
+    const {control, handleSubmit,watch, setValue, getValues, formState: {errors}} = useForm({
         defaultValues: {
             gains: '',
             nft: ''
         }
     });
-    const onSubmit = data => console.log(data);
 
+    const onSubmit = data => console.log(data);
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -188,6 +188,9 @@ function Hero() {
                                     <Controller
                                         rules={{
                                             required: 'You must have to specify gains',
+                                            onChange: (event) => {
+                                                setValue('nft',event.target.value / 500);
+                                            }
                                         }}
                                         name="gains"
                                         control={control}
@@ -295,6 +298,9 @@ function Hero() {
                                     <Controller
                                         rules={{
                                             required: 'You must have to specify NFT',
+                                            onChange: (event) => {
+                                                setValue('gains',event.target.value * 500);
+                                            }
                                         }}
                                         name="nft"
                                         control={control}
@@ -372,7 +378,16 @@ function Hero() {
                                 </Button>
                                 <Button
                                     sx={{
-                                        height: "71px",
+                                        '&:hover': {
+                                            background: '#fff',
+                                        },
+                                        my: '1.5rem',
+                                        borderBottom: '1px solid #000',
+                                        py: '1rem',
+                                        borderRadius: 0,
+                                        px: '0 !important',
+                                        width: "240px",
+                                        height: '15px',
                                         fontWeight: 400,
                                         fontSize: {
                                             xs: '15px',
@@ -380,7 +395,6 @@ function Hero() {
                                         },
                                         color: '#041518',
                                         lineHeight: '30px',
-                                        width: '265px',
                                     }}
                                     variant="text"
                                     type={'button'}
