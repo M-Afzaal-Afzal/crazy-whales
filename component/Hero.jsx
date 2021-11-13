@@ -50,7 +50,7 @@ const CssTextField = styled(TextField)({
 
 function Hero() {
 
-    const {control, handleSubmit,watch, setValue, getValues, formState: {errors}} = useForm({
+    const {control, handleSubmit,watch,clearErrors, setValue, getValues, formState: {errors}} = useForm({
         defaultValues: {
             gains: '',
             nft: ''
@@ -189,8 +189,13 @@ function Hero() {
                                         rules={{
                                             required: 'You must have to specify gains',
                                             onChange: (event) => {
-                                                setValue('nft',event.target.value / 500);
-                                            }
+                                                setValue('nft',Math.ceil(event.target.value / 500));
+                                            },
+                                            min: {
+                                                value: 500,
+                                                message: "Too Low, minimum value is 500",
+                                            },
+                                            validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
                                         }}
                                         name="gains"
                                         control={control}
@@ -270,18 +275,18 @@ function Hero() {
                                     >
                                         1 Crazy whale = 500 gains
                                     </Typography>
-                                    {/* todo add the functionality*/}
-                                    <ImportExportIcon
-                                        onClick={switchValues}
-                                        sx={{
-                                            background: "#88E9FC",
-                                            borderRadius: "10px",
-                                            color: "black",
-                                            width: "40px",
-                                            height: "40px",
-                                            cursor: "pointer",
-                                        }}
-                                    />
+
+                                    {/*<ImportExportIcon*/}
+                                    {/*    onClick={switchValues}*/}
+                                    {/*    sx={{*/}
+                                    {/*        background: "#88E9FC",*/}
+                                    {/*        borderRadius: "10px",*/}
+                                    {/*        color: "black",*/}
+                                    {/*        width: "40px",*/}
+                                    {/*        height: "40px",*/}
+                                    {/*        cursor: "pointer",*/}
+                                    {/*    }}*/}
+                                    {/*/>*/}
                                 </Box>
                                 <Box
                                     sx={{
@@ -300,6 +305,10 @@ function Hero() {
                                             required: 'You must have to specify NFT',
                                             onChange: (event) => {
                                                 setValue('gains',event.target.value * 500);
+                                            },
+                                            validate: {
+                                                isInteger: (value => Number.isInteger(+value) || "Please input integer values"),
+                                                isNegative : (value => value > 0 || "Please input positive values"),
                                             }
                                         }}
                                         name="nft"
