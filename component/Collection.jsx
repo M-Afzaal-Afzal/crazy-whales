@@ -54,7 +54,6 @@ function Collection() {
                     >
                         <Fade cascade bottom>
 
-
                             <Typography
                                 id="collection-heading"
                                 variant="h2"

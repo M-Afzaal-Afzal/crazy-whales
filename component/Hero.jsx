@@ -403,6 +403,7 @@ function Hero() {
                                     }}
                                     variant="contained"
                                     type={'submit'}
+                                    disabled={errors.nft}
                                 >
                                     claim
                                 </Button>
