@@ -81,6 +81,7 @@ function Collection() {
                                     fontFamily: "lato",
                                     fontSize: "18px",
                                     lineHeight: "30px",
+                                    fontWeight: '600',
                                     color: "#041518",
                                     "&:hover": {
                                         background: "#88E9FC",
@@ -93,8 +94,6 @@ function Collection() {
                         </Fade>
                     </Box>
                     <Box component="div" sx={{}}>
-
-
 
                         <Grid
                             sx={{justifyContent: "center", alignItems: "center", mt: 5}}

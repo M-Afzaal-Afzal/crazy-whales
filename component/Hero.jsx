@@ -82,7 +82,12 @@ function Hero() {
             }}
             maxWidth="fluid"
         >
-            <Container sx={{}} maxWidth="lg">
+            <Container sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }} maxWidth="lg">
                 <Box
                     sx={{
                         width: "100%",
@@ -97,6 +102,7 @@ function Hero() {
 
                     <Modal
                         open={open}
+
                         onClose={handleClose}
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"
@@ -446,8 +452,10 @@ function Hero() {
                             position: 'relative',
                             zIndex: 999,
                             mr: {
-                                md: 0,
+                                xs: '8px',
                                 sm: 0,
+                                md: 0,
+
                             },
                             "&:hover": {
                                 border: "2px solid #88E9FC",
@@ -462,30 +470,33 @@ function Hero() {
 
 
                 <Box
-                    id="hero-down"
+                    // id="hero-down"
                     sx={{
-                        width: "100%",
+                        // width: "100%",
                         display: "grid",
                         gridTemplateColumns: {
                             xs: '1fr',
                             md: "1fr 1fr",
                         },
                         gridGap: '1rem',
+                        placeItems: 'center',
                         justifyContent: "space-between",
                         alignItems: "center",
                         mt: 8,
                     }}
-                    component="div"
                 >
                     <Box
-                        id="hero-left"
+                        // id="hero-left"
                         sx={{
                             order: {
                                 xs: 5,
                                 md: 0,
                             },
-                            width: '100%',
-                            flexShrink:0,
+                            width: {
+                            xs: "90%",
+                            sm: "100%",
+                        },
+                            // flexShrink:0,
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
@@ -495,7 +506,7 @@ function Hero() {
                                 sm: 3,
                             },
                         }}
-                        component="div"
+                        // component="div"
                     >
                         <Fade bottom cascade>
                             <Typography
@@ -570,7 +581,7 @@ function Hero() {
                                     color: "black",
                                     fontSize: "24px",
                                     lineHeight: "30px",
-                                    fontWeight: 400,
+                                    fontWeight: 600,
                                     mt: 5,
                                     "&:hover": {
                                         background: "#88E9FC",
@@ -585,7 +596,10 @@ function Hero() {
                     </Box>
                     <Box
                         sx={{
-                            width: '100%',
+                            width: {
+                                xs: "90%",
+                                sm: "100%",
+                            },
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
@@ -593,8 +607,8 @@ function Hero() {
                             // px: 2,
 
                         }}
-                        id="hero-right"
-                        component="div"
+                        // id="hero-right"
+                        // component="div"
                     >
                         <Flip style={{width: '100%'}} left>
                             <Image id="WhaleWallpaper" src={heroImage}

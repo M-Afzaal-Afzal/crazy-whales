@@ -263,14 +263,14 @@ span{
 
 @media only screen and (max-width:500px){
   #model{
-    width: 100%;
+    width: 345px;
   }
 }
 
 @media only screen and (max-width:905px){
-#hero-down{
-  flex-direction: column-reverse;
-}
+/*#hero-down{*/
+/*  flex-direction: column-reverse;*/
+/*}*/
 #hero-right{
   width: 100%;
 }
