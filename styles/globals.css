@@ -33,6 +33,8 @@
 #whale-pic{
   /*border-radius: 15px;*/
   /*border: 2px solid #88E9FC;*/
+  width: 368px;
+  height: 368px;
 }
 #icons{
   margin: 10px;
@@ -113,6 +115,10 @@ span{
 
   .our-partners-top-div {
     padding-bottom: 10rem !important;
+  }
+  #whale-pic {
+    width: 290px;
+    height: 290px;
   }
 }
 
