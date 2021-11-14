@@ -61,6 +61,10 @@ function Collection() {
                                 component="div"
                                 gutterBottom
                                 sx={{
+                                    ml: {
+                                        xs: '0',
+                                        lg: '8px',
+                                    },
                                     fontFamily: "'Cinzel Decorative', cursive",
                                     lineHeight: "96px",
                                     fontWeight: "900",
@@ -75,6 +79,10 @@ function Collection() {
                                 variant="contained"
                                 sx={{
                                     width: "188px",
+                                    mr: {
+                                        xs: '0',
+                                        lg: '8px',
+                                    },
                                     height: "60px",
                                     background: "#88E9FC",
                                     borderRadius: "10px",

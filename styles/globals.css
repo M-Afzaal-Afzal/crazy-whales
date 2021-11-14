@@ -36,6 +36,11 @@
   width: 368px;
   height: 368px;
 }
+
+#team-pic {
+  width: 210px;
+  height: 210px;
+}
 #icons{
   margin: 10px;
 }

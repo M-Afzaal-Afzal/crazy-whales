@@ -53,8 +53,8 @@ function Hero() {
 
     const {control, handleSubmit, watch, clearErrors, setValue, getValues, formState: {errors}} = useForm({
         defaultValues: {
-            gains: '',
-            nft: ''
+            gains: '500',
+            nft: '1'
         }
     });
 
@@ -316,7 +316,7 @@ function Hero() {
                                     {/* <CssTextField sx={{width:'80%',mr:2,outline:'none',border:'none',}} label="You Send" id="custom-css-outlined-input" /> */}
                                     <Controller
                                         rules={{
-                                            required: 'You must have to specify gains',
+                                            required: '',
                                             onChange: (event) => {
                                                 setValue('nft',event.target.value / 500);
                                             },
@@ -324,7 +324,7 @@ function Hero() {
                                                 value: 500,
                                                 message: "Too Low, minimum value is 500",
                                             },
-                                            validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
+                                            // validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
                                         }}
                                         name="gains"
                                         control={control}
@@ -458,6 +458,7 @@ function Hero() {
                                 xs: '8px',
                                 sm: 0,
                                 md: 0,
+                                lg: '8px',
 
                             },
                             "&:hover": {

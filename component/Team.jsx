@@ -87,7 +87,7 @@ function Team() {
 
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/1.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/1.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -128,7 +128,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/2.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/2.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -169,7 +169,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/3.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/3.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -210,7 +210,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/4.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/4.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -251,7 +251,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/5.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/5.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -292,7 +292,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/6.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/6.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -333,7 +333,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/7.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/7.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
@@ -374,7 +374,7 @@ function Team() {
                                     </Grid>
                                     <Grid sx={{boxShadow: "none"}}>
                                         <Item sx={{boxShadow: "none"}} className="item">
-                                            <img className={'zoom'} id="whale-pic" src="/team/8.png" alt=""/>
+                                            <img className={'zoom'} id="team-pic" src="/team/8.png" alt=""/>
                                             <Box
                                                 sx={{
                                                     display: "flex",
