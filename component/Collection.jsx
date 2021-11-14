@@ -142,9 +142,15 @@ function Collection() {
                     display: 'flex',
                     justifyContent: 'flex-end',
                     marginRight: '-3rem',
-                    py: '64px',
+                    pt: '64px',
                 }}>
-                <img id="" src="/line1.png" alt="Corner"/>
+                    <Box as={'img'} sx={{
+                        width: {
+                            xs: '103px',
+                            md: '178px',
+                            lg: "337px",
+                        }
+                    }} id="" src="/line1.png" alt="Corner"/>
 
                 </Box>
             </Container>

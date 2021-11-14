@@ -18,7 +18,7 @@ const Item = styled(Paper)(({theme}) => ({
 function Team() {
     return (
         <>
-            <Container
+            <Box
                 sx={{
                     backgroundColor: "black",
                     minHeight: "100vh",
@@ -33,7 +33,7 @@ function Team() {
                 className={'our-partners-top-div'}
             >
                 <Image id={'teamBg'} src={"/TeamBG.png"} layout={"fill"}/>
-                <Container
+                <Box
                     sx={{
                         display: "block",
                         justifyContent: "center",
@@ -41,10 +41,11 @@ function Team() {
                         flexDirection: "column",
                         // mt: 8,
                     }}
-                    maxWidth="lg"
+
                     className={'team-container'}
                 >
                     <Box
+                        // maxWidth="lg"
                         id="Team"
                         sx={{
                             display: "flex",
@@ -74,7 +75,7 @@ function Team() {
                                 Team
                             </Typography>
                         </Fade>
-                        <Box component="div" sx={{}}>
+                        <Container component="div" sx={{}}>
                             <Grid
                                 sx={{justifyContent: "center", alignItems: "center", flexWrap: 'wrap', mt: 5}}
                                 container
@@ -414,15 +415,40 @@ function Team() {
                                     </Grid>
                                 </Fade>
                             </Grid>
-                        </Box>
+                        </Container>
                     </Box>
+
                     <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        marginLeft: {
+                            xs: '-3rem',
+                            md: '-3rem',
+                        },
+                        pt: '128px',
+                        mb: {
+                            xs: '-4rem',
+                            md: '-8rem',
+                            lg: "-1rem",
+                        },
+                    }}>
+                        <Box as={'img'} sx={{
+                            width: {
+                                xs: '80px',
+                                md: '178px',
+                                lg: "337px",
+                            }
+                        }} id="" src="/line2.png" alt="Corner"/>
+
+                    </Box>
+
+                    <Container  maxWidth="lg" sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         flexDirection: 'column',
                         py: 5,
-                        mt: 30,
+                        // mt: 30,
                         position: 'relative',
                     }} className={'our-partners-container'} component="div" id="partners">
                         <Fade bottom>
@@ -438,10 +464,17 @@ function Team() {
                                     fontWeight: "900",
                                     mb: 0,
                                     textAlign: "center",
-                                    lineHeight: "107.84px",
-                                    fontSize: "80px",
+                                    lineHeight: {
+                                        xs: "43.14px",
+                                    },
+                                    py: "1.5rem",
+                                    fontSize: {
+                                        xs: '32px',
+                                        md: '55px',
+                                        lg: "80px",
+                                    },
                                 }}
-                                className={'our-partners'}
+                                // className={'our-partners'}
                             >
                                 Our partners
                             </Typography>
@@ -658,11 +691,11 @@ function Team() {
                                 </Fade>
                             </Grid>
                         </Box>
-                    </Box>
-                </Container>
+                    </Container>
+                </Box>
                 <img id="group2" src="/group2.png" alt="Corner"/>
-                <img id="line2" src="/line2.png" alt="Corner"/>
-            </Container>
+
+            </Box>
         </>
     );
 }
