@@ -9,6 +9,7 @@
   background: -webkit-linear-gradient( right,#FFFFFF, #88E9FC );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 #WhaleWallpaper{
   width:480px;

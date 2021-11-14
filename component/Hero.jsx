@@ -11,6 +11,7 @@ import InputBase from "@mui/material/InputBase";
 import ImportExportIcon from "@mui/icons-material/ImportExport";
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
+import heroImage from '../assets/hero.png';
 
 import {useForm, Controller} from "react-hook-form";
 import Image from 'next/image';
@@ -445,7 +446,7 @@ function Hero() {
                             position: 'relative',
                             zIndex: 999,
                             mr: {
-                                md: 5,
+                                md: 0,
                                 sm: 0,
                             },
                             "&:hover": {
@@ -458,11 +459,18 @@ function Hero() {
                         Connect Wallet
                     </Button>
                 </Box>
+
+
                 <Box
                     id="hero-down"
                     sx={{
                         width: "100%",
-                        display: "flex",
+                        display: "grid",
+                        gridTemplateColumns: {
+                            xs: '1fr',
+                            md: "1fr 1fr",
+                        },
+                        gridGap: '1rem',
                         justifyContent: "space-between",
                         alignItems: "center",
                         mt: 8,
@@ -472,10 +480,12 @@ function Hero() {
                     <Box
                         id="hero-left"
                         sx={{
-                            width: {
-                                lg: "50%",
-                                md: "45%",
+                            order: {
+                                xs: 5,
+                                md: 0,
                             },
+                            width: '100%',
+                            flexShrink:0,
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
@@ -575,21 +585,19 @@ function Hero() {
                     </Box>
                     <Box
                         sx={{
-                            width: {
-                                lg: "50%",
-                                md: "45%",
-                            },
+                            width: '100%',
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
                             flexDirection: "column",
-                            px: 2,
+                            // px: 2,
+
                         }}
                         id="hero-right"
                         component="div"
                     >
-                        <Flip left>
-                            <Image width={398} height={398} id="WhaleWallpaper" src={"/hero.png"}
+                        <Flip style={{width: '100%'}} left>
+                            <Image id="WhaleWallpaper" src={heroImage}
                                    alt="WhaleWallpaper"/>
                         </Flip>
                         {/*<Typography*/}
