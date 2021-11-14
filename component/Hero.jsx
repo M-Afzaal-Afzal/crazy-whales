@@ -522,7 +522,7 @@ function Hero() {
                                     fontFamily: "'Cinzel Decorative', cursive",
                                     fontSize: {
                                         md: "120px",
-                                        xs: "90px",
+                                        xs: "80px",
                                     },
                                     fontWeight: 700,
                                     lineHeight: {
