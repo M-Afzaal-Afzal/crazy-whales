@@ -50,7 +50,7 @@ const CssTextField = styled(TextField)({
 
 function Hero() {
 
-    const {control, handleSubmit,watch,clearErrors, setValue, getValues, formState: {errors}} = useForm({
+    const {control, handleSubmit, watch, clearErrors, setValue, getValues, formState: {errors}} = useForm({
         defaultValues: {
             gains: '',
             nft: ''
@@ -189,7 +189,7 @@ function Hero() {
                                         rules={{
                                             required: 'You must have to specify gains',
                                             onChange: (event) => {
-                                                setValue('nft',Math.ceil(event.target.value / 500));
+                                                setValue('nft',event.target.value / 500);
                                             },
                                             min: {
                                                 value: 500,
@@ -215,6 +215,9 @@ function Hero() {
                                                 xs: '17px',
                                                 md: "24px",
                                             },
+                                            '&:hover': {
+                                                background: 'transparent',
+                                            },
                                             lineHeight: "29px",
                                             fontFamily: "lato",
                                             fontWeight: 700,
@@ -226,6 +229,8 @@ function Hero() {
                                         }}
                                         type={'button'}
                                         variant="text"
+                                        disableRipple
+
                                     >
                                         GAINS
                                     </Button>
@@ -304,11 +309,11 @@ function Hero() {
                                         rules={{
                                             required: 'You must have to specify NFT',
                                             onChange: (event) => {
-                                                setValue('gains',event.target.value * 500);
+                                                setValue('gains', event.target.value * 500);
                                             },
                                             validate: {
                                                 isInteger: (value => Number.isInteger(+value) || "Please input integer values"),
-                                                isNegative : (value => value > 0 || "Please input positive values"),
+                                                isNegative: (value => value > 0 || "Please input positive values"),
                                             }
                                         }}
                                         name="nft"
@@ -331,6 +336,9 @@ function Hero() {
                                                 xs: '17px',
                                                 md: "24px",
                                             },
+                                            '&:hover': {
+                                                background: 'transparent',
+                                            },
                                             lineHeight: "29px",
                                             fontFamily: "lato",
                                             fontWeight: 700,
@@ -340,6 +348,7 @@ function Hero() {
                                             borderRadius: "0px",
                                             mr: 1,
                                         }}
+                                        disableRipple
                                         variant="text"
                                         type={'button'}
                                     >
@@ -349,12 +358,14 @@ function Hero() {
                                 {
                                     errors.nft && (
 
-                                        <Box sx={{
-                                            width: '100%',
-                                            color: 'red',
-                                            mt: '4px',
-                                            ml: '2rem',
-                                        }}>
+                                        <Box
+                                            sx={{
+                                                width: '100%',
+                                                color: 'red',
+                                                mt: '4px',
+                                                ml: '2rem',
+                                            }}
+                                        >
                                             {errors.nft.message}
                                         </Box>
                                     )
@@ -432,7 +443,7 @@ function Hero() {
                             lineHeight: "30px",
                             fontSize: "18px",
                             position: 'relative',
-                            zIndex:999,
+                            zIndex: 999,
                             mr: {
                                 md: 5,
                                 sm: 0,
@@ -490,7 +501,7 @@ function Hero() {
                                     },
                                     fontWeight: 700,
                                     lineHeight: {
-                                        xs: "107.84px",
+                                        xs: "145.84px",
                                         lg: "170px"
                                     },
                                     mt: '3rem',
@@ -578,39 +589,40 @@ function Hero() {
                         component="div"
                     >
                         <Flip left>
-                            <Image width={417} height={403} id="WhaleWallpaper" src={"/HeroWhale.png"} alt="WhaleWallpaper"/>
+                            <Image width={398} height={398} id="WhaleWallpaper" src={"/hero.png"}
+                                   alt="WhaleWallpaper"/>
                         </Flip>
-                        <Typography
-                            sx={{
-                                fontFamily: "lato",
-                                fontWeight: "600",
-                                fontSize: "18px",
-                                lineHeight: "30px",
-                                color: "rgba(255, 255, 255, 0.9)",
-                                textAlign: "center",
-                                textTransform: "uppercase",
-                                my: 4,
-                            }}
-                            variant="body1"
-                            gutterBottom
-                        >
-                            Powered by
-                        </Typography>
-                        <Box
-                            sx={{
-                                display: "grid",
-                                gridTemplateColumns: 'auto auto',
-                                justifyContent: "center",
-                                alignItems: "center",
-                                flexWrap: "wrap",
-                                gridGap: '1rem',
-                            }}
-                            component="div"
-                        >
-                            <img id="poweredBy1" src="/polygon.png" alt=""/>
-                            {/*<img id="poweredBy2" src="/poweredBy2.png" alt=""/>*/}
-                            <img id="poweredBy3" src="/poweredBy3.png" alt=""/>
-                        </Box>
+                        {/*<Typography*/}
+                        {/*    sx={{*/}
+                        {/*        fontFamily: "lato",*/}
+                        {/*        fontWeight: "600",*/}
+                        {/*        fontSize: "18px",*/}
+                        {/*        lineHeight: "30px",*/}
+                        {/*        color: "rgba(255, 255, 255, 0.9)",*/}
+                        {/*        textAlign: "center",*/}
+                        {/*        textTransform: "uppercase",*/}
+                        {/*        my: 4,*/}
+                        {/*    }}*/}
+                        {/*    variant="body1"*/}
+                        {/*    gutterBottom*/}
+                        {/*>*/}
+                        {/*    Powered by*/}
+                        {/*</Typography>*/}
+                        {/*<Box*/}
+                        {/*    sx={{*/}
+                        {/*        display: "grid",*/}
+                        {/*        gridTemplateColumns: 'auto auto',*/}
+                        {/*        justifyContent: "center",*/}
+                        {/*        alignItems: "center",*/}
+                        {/*        flexWrap: "wrap",*/}
+                        {/*        gridGap: '1rem',*/}
+                        {/*    }}*/}
+                        {/*    component="div"*/}
+                        {/*>*/}
+                        {/*    <img id="poweredBy1" src="/polygon.png" alt=""/>*/}
+                        {/*    /!*<img id="poweredBy2" src="/poweredBy2.png" alt=""/>*!/*/}
+                        {/*    <img id="poweredBy3" src="/poweredBy3.png" alt=""/>*/}
+                        {/*</Box>*/}
                     </Box>
                 </Box>
             </Container>

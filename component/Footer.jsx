@@ -86,7 +86,7 @@ function Footer() {
                             fontFamily: 'lato',
                             fontWeight: 600,
                             lineHeight: '30px',
-                            mt: 3,
+                            mt: '1rem',
                             color: "#88E9FC",
                             "&:hover": {
                                 border: "2px solid #88E9FC",
@@ -99,7 +99,14 @@ function Footer() {
                     <Box sx={{color: 'white',mt: '1rem'}}>
                         Audited by Hacken
                     </Box>
-                    <Box sx={{color: 'white',mt: '1rem'}}>
+                    <Box component={'a'} href={'#'} sx={{
+                        color: 'white',
+                        display: 'block',
+                        fontSize: '1rem',
+                        mt: '1rem',
+                        border: 'none',
+                        textDecoration: 'none',
+                    }}>
                         business@crazywhales.com
                     </Box>
 

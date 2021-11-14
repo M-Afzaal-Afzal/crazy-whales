@@ -20,8 +20,9 @@ function Collection() {
             <Container
                 sx={{
                     backgroundColor: "black", minHeight: "80vh", py: 1, pb: {
-                        xs: '8rem',
-                        sm: '10rem',
+                        xs: '1rem',
+                        sm: '1rem',
+                        overflow: 'hidden',
                     }, mt: -1, position: 'relative', zIndex: 111
                 }}
                 maxWidth="fluid"
@@ -104,32 +105,32 @@ function Collection() {
                             <Fade cascade={true} delay={1} bottom>
                             <Grid  sx={{boxShadow: "none"}}>
                                 <Item  sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale4.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection1.png" alt=""/>
                                 </Item>
                             </Grid>
                             <Grid sx={{boxShadow: "none"}}>
                                 <Item sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale5.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection2.png" alt=""/>
                                 </Item>
                             </Grid>
                             <Grid sx={{boxShadow: "none"}}>
                                 <Item sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale6.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection3.png" alt=""/>
                                 </Item>
                             </Grid>
                             <Grid sx={{boxShadow: "none"}}>
                                 <Item sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale6.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection4.png" alt=""/>
                                 </Item>
                             </Grid>
                             <Grid sx={{boxShadow: "none"}}>
                                 <Item sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale7.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection5.png" alt=""/>
                                 </Item>
                             </Grid>
                             <Grid sx={{boxShadow: "none"}}>
                                 <Item sx={{boxShadow: "none"}} className="item">
-                                    <img className={'shake'} id="whale-pic" src="/whale8.png" alt=""/>
+                                    <img className={'shake'} id="whale-pic" src="/collection/collection6.png" alt=""/>
                                 </Item>
                             </Grid>
                             </Fade>
@@ -137,7 +138,15 @@ function Collection() {
                     </Box>
                 </Container>
                 <img id="group1" src="/Group1.png" alt="Corner"/>
-                <img id="line1" src="/line1.png" alt="Corner"/>
+                <Box sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    marginRight: '-3rem',
+                    py: '64px',
+                }}>
+                <img id="" src="/line1.png" alt="Corner"/>
+
+                </Box>
             </Container>
         </>
     );
