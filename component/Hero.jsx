@@ -179,127 +179,7 @@ function Hero() {
                                 component="form"
                                 onSubmit={handleSubmit(onSubmit)}
                             >
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: "100%",
-                                        background: "rgba(4, 19, 22, 0.05)",
-                                        borderRadius: "20px",
-                                        height: "61px",
-                                    }}
-                                    component="div"
-                                >
-                                    {/* <CssTextField sx={{width:'80%',mr:2,outline:'none',border:'none',}} label="You Send" id="custom-css-outlined-input" /> */}
-                                    <Controller
-                                        rules={{
-                                            required: 'You must have to specify gains',
-                                            onChange: (event) => {
-                                                setValue('nft',event.target.value / 500);
-                                            },
-                                            min: {
-                                                value: 500,
-                                                message: "Too Low, minimum value is 500",
-                                            },
-                                            validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
-                                        }}
-                                        name="gains"
-                                        control={control}
-                                        render={({field}) => <InputBase
-                                            type={'number'}
-                                            sx={{ml: 1, flex: 1, p: 1, width: "80%"}}
-                                            placeholder="You Send"
-                                            {...field}
-                                            // inputProps={{"aria-label": "search google maps"}}
-                                        />}
-                                    />
 
-
-                                    <Button
-                                        sx={{
-                                            fontSize: {
-                                                xs: '17px',
-                                                md: "24px",
-                                            },
-                                            '&:hover': {
-                                                background: 'transparent',
-                                            },
-                                            lineHeight: "29px",
-                                            fontFamily: "lato",
-                                            fontWeight: 700,
-                                            color: "#041316",
-                                            width: "20%",
-                                            borderLeft: "1px solid #1C292C33",
-                                            borderRadius: "0px",
-                                            mr: 1,
-                                        }}
-                                        type={'button'}
-                                        variant="text"
-                                        disableRipple
-
-                                    >
-                                        GAINS
-                                    </Button>
-                                </Box>
-
-                                {
-                                    errors.gains && (
-
-                                        <Box sx={{
-                                            width: '100%',
-                                            color: 'red',
-                                            mt: '4px',
-                                            ml: '2rem',
-                                        }}>
-                                            {errors.gains.message}
-                                        </Box>
-                                    )
-                                }
-
-
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        width: "100%",
-                                    }}
-                                    component="div"
-                                >
-                                    <Typography
-                                        variant="body1"
-                                        component="div"
-                                        gutterBottom
-                                        sx={{
-                                            fontFamily: "lato",
-                                            lineHeight: "21.6px",
-                                            fontWeight: "700",
-                                            mb: 0,
-                                            textAlign: "center",
-                                            fontSize: {
-                                                xs: '15px',
-                                                md: '18px',
-                                            },
-                                            color: "#041316",
-                                            my: 4,
-                                        }}
-                                    >
-                                        1 Crazy whale = 500 gains
-                                    </Typography>
-
-                                    {/*<ImportExportIcon*/}
-                                    {/*    onClick={switchValues}*/}
-                                    {/*    sx={{*/}
-                                    {/*        background: "#88E9FC",*/}
-                                    {/*        borderRadius: "10px",*/}
-                                    {/*        color: "black",*/}
-                                    {/*        width: "40px",*/}
-                                    {/*        height: "40px",*/}
-                                    {/*        cursor: "pointer",*/}
-                                    {/*    }}*/}
-                                    {/*/>*/}
-                                </Box>
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -377,6 +257,129 @@ function Hero() {
                                         </Box>
                                     )
                                 }
+
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        width: "100%",
+                                    }}
+                                    component="div"
+                                >
+                                    <Typography
+                                        variant="body1"
+                                        component="div"
+                                        gutterBottom
+                                        sx={{
+                                            fontFamily: "lato",
+                                            lineHeight: "21.6px",
+                                            fontWeight: "700",
+                                            mb: 0,
+                                            textAlign: "center",
+                                            fontSize: {
+                                                xs: '15px',
+                                                md: '18px',
+                                            },
+                                            color: "#041316",
+                                            my: 4,
+                                        }}
+                                    >
+                                        1 Crazy Whale = 500 GAINS
+                                    </Typography>
+
+                                    {/*<ImportExportIcon*/}
+                                    {/*    onClick={switchValues}*/}
+                                    {/*    sx={{*/}
+                                    {/*        background: "#88E9FC",*/}
+                                    {/*        borderRadius: "10px",*/}
+                                    {/*        color: "black",*/}
+                                    {/*        width: "40px",*/}
+                                    {/*        height: "40px",*/}
+                                    {/*        cursor: "pointer",*/}
+                                    {/*    }}*/}
+                                    {/*/>*/}
+                                </Box>
+
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: "100%",
+                                        background: "rgba(4, 19, 22, 0.05)",
+                                        borderRadius: "20px",
+                                        height: "61px",
+                                    }}
+                                    component="div"
+                                >
+                                    {/* <CssTextField sx={{width:'80%',mr:2,outline:'none',border:'none',}} label="You Send" id="custom-css-outlined-input" /> */}
+                                    <Controller
+                                        rules={{
+                                            required: 'You must have to specify gains',
+                                            onChange: (event) => {
+                                                setValue('nft',event.target.value / 500);
+                                            },
+                                            min: {
+                                                value: 500,
+                                                message: "Too Low, minimum value is 500",
+                                            },
+                                            validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
+                                        }}
+                                        name="gains"
+                                        control={control}
+                                        render={({field}) => <InputBase
+                                            disabled
+                                            type={'number'}
+                                            sx={{ml: 1, flex: 1, p: 1, width: "80%"}}
+                                            placeholder="You Send"
+                                            {...field}
+                                            // inputProps={{"aria-label": "search google maps"}}
+                                        />}
+                                    />
+
+
+                                    <Button
+                                        sx={{
+                                            fontSize: {
+                                                xs: '17px',
+                                                md: "24px",
+                                            },
+                                            '&:hover': {
+                                                background: 'transparent',
+                                            },
+                                            lineHeight: "29px",
+                                            fontFamily: "lato",
+                                            fontWeight: 700,
+                                            color: "#041316",
+                                            width: "20%",
+                                            borderLeft: "1px solid #1C292C33",
+                                            borderRadius: "0px",
+                                            mr: 1,
+                                        }}
+                                        type={'button'}
+                                        variant="text"
+                                        disableRipple
+
+                                    >
+                                        GAINS
+                                    </Button>
+                                </Box>
+
+                                {
+                                    errors.gains && (
+
+                                        <Box sx={{
+                                            width: '100%',
+                                            color: 'red',
+                                            mt: '4px',
+                                            ml: '2rem',
+                                        }}>
+                                            {errors.gains.message}
+                                        </Box>
+                                    )
+                                }
+
                                 <Button
                                     sx={{
                                         mt: 4,
@@ -427,7 +430,7 @@ function Hero() {
                                     type={'button'}
                                     disableRipple
                                 >
-                                    buy gains on pancakeswap
+                                    buy gains on QuickSwap
                                 </Button>
                             </Box>
                         </Box>

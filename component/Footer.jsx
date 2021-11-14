@@ -33,9 +33,13 @@ function Footer() {
                             }}
                             component="div"
                         >
-                            <a id="icons" href="">
+                            <a rel={'noreferrer'}  target={'_blank'}
+                                href={'https://twitter.com/crazywhalesnft '}
+                                id="icons"
+                            >
                                 <Box
-                                    component="div"
+                                    // component={'a'}
+
                                     sx={{
                                         width: "70px",
                                         height: "70px",
@@ -54,7 +58,10 @@ function Footer() {
                                     />
                                 </Box>
                             </a>
-                            <a id="icons" href="">
+                            <a
+                                rel={'noreferrer'}  target={'_blank'}
+                                href={'https://t.me/crazywhalesnft'}
+                                id="icons">
                                 <Box
                                     component="div"
                                     sx={{
@@ -99,7 +106,8 @@ function Footer() {
                     <Box sx={{color: 'white',mt: '1rem'}}>
                         Audited by Hacken
                     </Box>
-                    <Box component={'a'} href={'#'} sx={{
+                    <Box component={'a'}
+                         href="mailto:business@crazywhales.com" sx={{
                         color: 'white',
                         display: 'block',
                         fontSize: '1rem',
