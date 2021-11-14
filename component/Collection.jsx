@@ -66,7 +66,10 @@ function Collection() {
                                         lg: '8px',
                                     },
                                     fontFamily: "'Cinzel Decorative', cursive",
-                                    lineHeight: "96px",
+                                    lineHeight: {
+                                    xs: "43.14px",
+                                        sm: "96px",
+                                },
                                     fontWeight: "900",
                                     mb: 0,
                                     textAlign: 'center'
