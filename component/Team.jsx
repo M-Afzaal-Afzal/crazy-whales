@@ -491,7 +491,7 @@ function Team() {
                         },
                         pt: '128px',
                         mb: {
-                            xs: '-4rem',
+                            xs: '-6.5rem',
                             md: '-8rem',
                             lg: "-1rem",
                         },
