@@ -16,37 +16,38 @@ const Item = styled(Paper)(({theme}) => ({
 }));
 
 const partners = [
+    // {
+    //     id: 1,
+    //     imgSrc: '/partners/1.png',
+    // },{
+    //     id: 2,
+    //     imgSrc: '/partners/2.png',
+    // },{
+    //     id: 3,
+    //     imgSrc: '/partners/3.png',
+    // },{
+    //     id: 4,
+    //     imgSrc: '/partners/4.png',
+    // },{
+    //     id: 5,
+    //     imgSrc: '/partners/5.png',
+    // },{
+    //     id: 6,
+    //     imgSrc: '/partners/6.png',
+    // },{
+    //     id: 7,
+    //     imgSrc: '/partners/7.png',
+    // },{
+    //     id: 8,
+    //     imgSrc: '/partners/8.png',
+    // },{
+    //     id: 9,
+    //     imgSrc: '/partners/9.png',
+    // },{
+    //     id: 10,
+    //     imgSrc: '/partners/10.png',
+    // },
     {
-        id: 1,
-        imgSrc: '/partners/1.png',
-    },{
-        id: 2,
-        imgSrc: '/partners/2.png',
-    },{
-        id: 3,
-        imgSrc: '/partners/3.png',
-    },{
-        id: 4,
-        imgSrc: '/partners/4.png',
-    },{
-        id: 5,
-        imgSrc: '/partners/5.png',
-    },{
-        id: 6,
-        imgSrc: '/partners/6.png',
-    },{
-        id: 7,
-        imgSrc: '/partners/7.png',
-    },{
-        id: 8,
-        imgSrc: '/partners/8.png',
-    },{
-        id: 9,
-        imgSrc: '/partners/9.png',
-    },{
-        id: 10,
-        imgSrc: '/partners/10.png',
-    },{
         id: 11,
         imgSrc: '/partners/11.png',
     },{
