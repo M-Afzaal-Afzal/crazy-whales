@@ -15,6 +15,70 @@ const Item = styled(Paper)(({theme}) => ({
     background: "unset",
 }));
 
+const partners = [
+    {
+        id: 1,
+        imgSrc: '/partners/1.png',
+    },{
+        id: 2,
+        imgSrc: '/partners/2.png',
+    },{
+        id: 3,
+        imgSrc: '/partners/3.png',
+    },{
+        id: 4,
+        imgSrc: '/partners/4.png',
+    },{
+        id: 5,
+        imgSrc: '/partners/5.png',
+    },{
+        id: 6,
+        imgSrc: '/partners/6.png',
+    },{
+        id: 7,
+        imgSrc: '/partners/7.png',
+    },{
+        id: 8,
+        imgSrc: '/partners/8.png',
+    },{
+        id: 9,
+        imgSrc: '/partners/9.png',
+    },{
+        id: 10,
+        imgSrc: '/partners/10.png',
+    },{
+        id: 11,
+        imgSrc: '/partners/11.png',
+    },{
+        id: 12,
+        imgSrc: '/partners/12.png',
+    },{
+        id: 13,
+        imgSrc: '/partners/13.png',
+    },{
+        id: 14,
+        imgSrc: '/partners/14.png',
+    },{
+        id: 15,
+        imgSrc: '/partners/15.jpg',
+    },{
+        id: 16,
+        imgSrc: '/partners/16.png',
+    },{
+        id: 17,
+        imgSrc: '/partners/17.png',
+    },{
+        id: 18,
+        imgSrc: '/partners/18.png',
+    },{
+        id: 19,
+        imgSrc: '/partners/19.svg',
+    },{
+        id: 20,
+        imgSrc: '/partners/20.jpg',
+    },
+];
+
 function Team() {
     return (
         <>
@@ -489,205 +553,35 @@ function Team() {
                                 <Fade bottom cascade>
 
 
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/1.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/2.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/3.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/4.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/5.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/6.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/7.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/8.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/9.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#FFFFFF",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/partners/10.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
+                                    {
+                                        partners.map(({id,imgSrc}) => {
+                                            return (
+                                                <Grid key={id} xs={1} sx={{boxShadow: "none"}}>
+                                                    <Item sx={{boxShadow: "none"}} className="item">
+                                                        <Box
+                                                            component="div"
+                                                            sx={{
+                                                                width: "200px",
+                                                                height: "200px",
+                                                                background: "#FFFFFF",
+                                                                display: "flex",
+                                                                justifyContent: "center",
+                                                                alignItems: "center",
+                                                                borderRadius: '30px',
+                                                                '& img': {
+                                                                    width: '170px',
+                                                                    height: 'auto',
+                                                                }
+                                                            }}
+                                                        >
+                                                            <img src={imgSrc} alt="Partner"/>
+                                                        </Box>
+                                                    </Item>
+                                                </Grid>
+                                            )
+                                        })
+                                    }
 
-                                    <Grid xs={1} sx={{boxShadow: "none"}}>
-                                        <Item sx={{boxShadow: "none"}} className="item">
-                                            <Box
-                                                component="div"
-                                                sx={{
-                                                    width: "200px",
-                                                    height: "200px",
-                                                    background: "#eee",
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    borderRadius: '30px'
-                                                }}
-                                            >
-                                                <img src="/poweredBy2.png" alt="Partner"/>
-                                            </Box>
-                                        </Item>
-                                    </Grid>
                                 </Fade>
                             </Grid>
                         </Box>

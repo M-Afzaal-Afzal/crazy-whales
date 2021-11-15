@@ -189,18 +189,29 @@ function Hero() {
                                         background: "rgba(4, 19, 22, 0.05)",
                                         borderRadius: "20px",
                                         height: "61px",
-                                    }}
+                                        '& input[type=number]' : {
+                                           ' -moz-appearance': 'textfield !important',
+                                        },
+                                        "& input::-webkit-outer-spin-button": {
+                                            '-webkit-appearance': 'none !important',
+                                            margin: 0
+                                        },
+                                        "input::-webkit-inner-spin-button" : {
+                                            '-webkit-appearance': 'none !important',
+                                            margin: 0
+                                        }
+                                     }}
                                     component="div"
                                 >
                                     <Controller
                                         rules={{
-                                            required: 'You must have to specify NFT',
+                                            required: 'Specify how many NFTs you want',
                                             onChange: (event) => {
                                                 setValue('gains', event.target.value * 500);
                                             },
                                             validate: {
-                                                isInteger: (value => Number.isInteger(+value) || "Please input integer values"),
-                                                isNegative: (value => value > 0 || "Please input positive values"),
+                                                isInteger: (value => Number.isInteger(+value) || "Decimal numbers not supported"),
+                                                isNegative: (value => value > 0 || "Negative numbers not supported"),
                                             }
                                         }}
                                         name="nft"
@@ -209,7 +220,7 @@ function Hero() {
 
                                             <InputBase
                                                 sx={{ml: 1, flex: 1, p: 1, width: "80%"}}
-                                                placeholder="You get"
+                                                placeholder=""
                                                 type={'number'}
                                                 // inputProps={{"aria-label": "search google maps"}}
                                                 {...field}
@@ -318,11 +329,11 @@ function Hero() {
                                         rules={{
                                             required: '',
                                             onChange: (event) => {
-                                                setValue('nft',event.target.value / 500);
+                                                setValue('nft', event.target.value / 500);
                                             },
                                             min: {
                                                 value: 500,
-                                                message: "Too Low, minimum value is 500",
+                                                message: "Min. purchase is 500 GAINS",
                                             },
                                             // validate: (value => value % 500 === 0 || "Invalid Input, Must be multiple of 500")
                                         }}
@@ -332,7 +343,7 @@ function Hero() {
                                             disabled
                                             type={'number'}
                                             sx={{ml: 1, flex: 1, p: 1, width: "80%"}}
-                                            placeholder="You Send"
+                                            placeholder=""
                                             {...field}
                                             // inputProps={{"aria-label": "search google maps"}}
                                         />}
@@ -498,9 +509,9 @@ function Hero() {
                                 md: 0,
                             },
                             width: {
-                            xs: "90%",
-                            sm: "100%",
-                        },
+                                xs: "90%",
+                                sm: "100%",
+                            },
                             // flexShrink:0,
                             display: "flex",
                             justifyContent: "center",
@@ -565,13 +576,10 @@ function Hero() {
                                 gutterBottom
                                 className={'crazy-whale-text'}
                             >
-                                Crazy Whales is a collection of 3,000 randomly generated NFTs on
-                                the BSC blockchain & created by world&apos;s first decentralized VC
-                                GAINS Associates. Our whales are wet, cute, fun, and sometimes
-                                grumpy. Crazy Whales are known to have different rarities, surf on
-                                beautiful waves, eat salty plankton & donate a portion of their
-                                royalties to non-profit organizations that protect oceans. Support
-                                the whale cause now by minting your first Crazy Whale!
+                                Crazy Whales is a collection of 3,000 randomly generated NFTs on the Polygon blockchain.
+                                Our whales are wet, cute, fun, and sometimes grumpy. Crazy Whales are known to have
+                                different rarities, surf on beautiful waves, eat salty plankton & donate a portion of
+                                their royalties to non-profit organizations that protect oceans.
                             </Typography>
                             <Button
                                 variant="contained"

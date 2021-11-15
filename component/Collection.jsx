@@ -75,7 +75,7 @@ function Collection() {
                                 }}
                                 className={'collection'}
                             >
-                                THE Collection
+                                THe Collection
                             </Typography>
                             <Button
                                 variant="contained"
